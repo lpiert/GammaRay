@@ -111,6 +111,8 @@ FontBrowserWidget::~FontBrowserWidget() = default;
 
 void FontBrowserWidget::delayedInit()
 {
+#ifndef GAMMARAY_QT6_TODO
     m_fontBrowser->setColors(palette().color(QPalette::Foreground),
                              palette().color(QPalette::Base));
+#endif
 }

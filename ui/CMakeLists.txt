@@ -104,7 +104,7 @@ target_include_directories(gammaray_ui SYSTEM PRIVATE ${Qt5Widgets_PRIVATE_INCLU
 
 target_link_libraries(gammaray_ui
   LINK_PUBLIC Qt::Core Qt::Gui Qt::Widgets gammaray_common
-  LINK_PRIVATE gammaray_common_internal gammaray_kitemmodels
+  LINK_PRIVATE gammaray_common_internal gammaray_kitemmodels Qt::WidgetsPrivate
 )
 if(TARGET KF5::SyntaxHighlighting)
   target_link_libraries(gammaray_ui LINK_PRIVATE KF5::SyntaxHighlighting)
@@ -125,6 +125,7 @@ target_include_directories(gammaray_ui_internal SYSTEM PRIVATE ${Qt5Gui_PRIVATE_
 target_link_libraries(gammaray_ui_internal
   Qt::Core
   Qt::Gui Qt::Widgets
+  Qt::GuiPrivate
   gammaray_common_internal
   gammaray_ui
   gammaray_kitemmodels

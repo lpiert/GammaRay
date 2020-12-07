@@ -54,6 +54,7 @@ static void drawArrow(QPainter *p, QPointF first, QPointF second)
 {
     p->drawLine(first, second);
     QPointF vector(second - first);
+#ifndef GAMMARAY_QT6_TODO
     QMatrix m;
     m.rotate(30);
     QVector2D v1 = QVector2D(m.map(vector)).normalized() * 10;
@@ -61,6 +62,7 @@ static void drawArrow(QPainter *p, QPointF first, QPointF second)
     QVector2D v2 = QVector2D(m.map(vector)).normalized() * 10;
     p->drawLine(second, second - v1.toPointF());
     p->drawLine(second, second - v2.toPointF());
+#endif
 }
 
 void WidgetRemoteView::drawDecoration(QPainter* p)

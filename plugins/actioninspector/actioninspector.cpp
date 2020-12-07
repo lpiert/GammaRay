@@ -114,10 +114,12 @@ void ActionInspector::registerMetaTypes()
     MO_ADD_PROPERTY_RO(QAction, actionGroup);
     MO_ADD_PROPERTY(QAction, data, setData);
     MO_ADD_PROPERTY(QAction, isSeparator, setSeparator);
+#ifndef GAMMARAY_QT6_TODO
     MO_ADD_PROPERTY_RO(QAction, menu);
     MO_ADD_PROPERTY_RO(QAction, parentWidget);
     MO_ADD_PROPERTY_RO(QAction, associatedGraphicsWidgets);
     MO_ADD_PROPERTY_RO(QAction, associatedWidgets);
+#endif
 
     MO_ADD_METAOBJECT1(QActionGroup, QObject);
     MO_ADD_PROPERTY_RO(QActionGroup, actions);

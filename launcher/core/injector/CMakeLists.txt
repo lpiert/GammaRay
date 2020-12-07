@@ -7,6 +7,7 @@ if(TARGET Qt::Widgets)
   target_link_libraries(gammaray_injector_style
     Qt::Core
     Qt::Gui Qt::Widgets
+    Qt::GuiPrivate
   )
 
   set_target_properties(gammaray_injector_style

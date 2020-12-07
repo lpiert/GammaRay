@@ -105,7 +105,9 @@ WidgetInspectorWidget::WidgetInspectorWidget(QWidget *parent)
     m_remoteView->setInvisibleMask(WidgetModelRoles::Invisible);
 
     auto layout = new QVBoxLayout;
+#ifndef GAMMARAY_QT6_TODO
     layout->setMargin(0);
+#endif
     auto toolbar = new QToolBar(this);
     // Our icons are 16x16 and support hidpi, so let force iconSize on every styles
     toolbar->setIconSize(QSize(16, 16));

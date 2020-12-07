@@ -591,7 +591,9 @@ void WidgetInspectorServer::registerWidgetMetaTypes()
     MO_ADD_PROPERTY_ST(QApplication, activeModalWidget);
     MO_ADD_PROPERTY_ST(QApplication, activePopupWidget);
     MO_ADD_PROPERTY_ST(QApplication, activeWindow);
+#ifndef GAMMARAY_QT6_TODO
     MO_ADD_PROPERTY_ST(QApplication, colorSpec);
+#endif
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     MO_ADD_PROPERTY_ST(QApplication, desktop);
 #endif
@@ -647,7 +649,9 @@ void WidgetInspectorServer::registerWidgetMetaTypes()
 
     MO_ADD_METAOBJECT0(QSizePolicy);
     MO_ADD_PROPERTY   (QSizePolicy, controlType, setControlType);
+#ifndef GAMMARAY_QT6_TODO
     MO_ADD_PROPERTY_RO(QSizePolicy, expandingDirections);
+#endif
     MO_ADD_PROPERTY   (QSizePolicy, hasHeightForWidth, setHeightForWidth);
     MO_ADD_PROPERTY   (QSizePolicy, hasWidthForHeight, setWidthForHeight);
     MO_ADD_PROPERTY   (QSizePolicy, horizontalPolicy, setHorizontalPolicy);

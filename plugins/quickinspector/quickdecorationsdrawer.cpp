@@ -405,6 +405,7 @@ void QuickDecorationsDrawer::drawArrow(const QPointF &first, const QPointF &seco
 {
     m_painter->drawLine(first, second);
     QPointF vector(second - first);
+#ifndef GAMMARAY_QT6_TODO
     QMatrix m;
     m.rotate(30);
     QVector2D v1 = QVector2D(m.map(vector)).normalized() * 10;
@@ -414,6 +415,7 @@ void QuickDecorationsDrawer::drawArrow(const QPointF &first, const QPointF &seco
     m_painter->drawLine(first, first + v2.toPointF());
     m_painter->drawLine(second, second - v1.toPointF());
     m_painter->drawLine(second, second - v2.toPointF());
+#endif
 }
 
 void QuickDecorationsDrawer::drawAnchor(const QuickItemGeometry &itemGeometry, Qt::Orientation orientation, qreal ownAnchorLine, qreal offset)
