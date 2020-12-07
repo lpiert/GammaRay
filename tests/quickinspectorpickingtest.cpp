@@ -42,7 +42,6 @@
 
 #include <QQuickView>
 #include <QItemSelectionModel>
-#include <QRegExp>
 #include <QSignalSpy>
 
 using namespace GammaRay;
